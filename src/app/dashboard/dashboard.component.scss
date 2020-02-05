@@ -1,0 +1,14 @@
+.container-dashboard {
+    padding: 1em;
+
+    &__title {
+        margin: 1em 0;
+    }
+
+    &__list-accounts {
+        display: flex;
+        // flex-wrap: wrap;
+        // height: 400px;
+        // align-content: space-between;
+    }
+}

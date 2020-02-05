@@ -1,0 +1,24 @@
+.container-card-account {
+
+    border: 1px solid black;
+    padding: 0.7em;
+    font-family: Arial, Helvetica, sans-serif;
+
+    &__name {
+        font-size: 0.7em;
+    }
+
+    &__amount {
+        font-size: 1em;
+        margin-top: 1em;
+    }
+
+    &__description {
+        font-size: 0.7em;
+        margin-bottom: 1em;
+    }
+
+    &__link {
+        font-size: 1em;
+    }
+}
