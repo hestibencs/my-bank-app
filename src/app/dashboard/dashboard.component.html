@@ -2,7 +2,7 @@
     <div class="container-dashboard__title">
         Mis cuentas
     </div>
-    <div class="container-dashboard__list-accounts">
-        <app-card-account></app-card-account>
+    <div class="container-dashboard__list">
+        <app-card-account *ngFor="let account of accounts"></app-card-account>
     </div>
 </div>

@@ -1,8 +1,9 @@
 .container-card-account {
-
+    margin: 1em;
     border: 1px solid black;
     padding: 0.7em;
     font-family: Arial, Helvetica, sans-serif;
+    min-width: 12em;
 
     &__name {
         font-size: 0.7em;
