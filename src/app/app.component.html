@@ -1,10 +1,8 @@
-<!-- nav -->
 <div class="header">
-  <div routerLink="/login" class="header__link header__link--logout">
+  <div routerLink="/login" class="header__link header__link--logout" *ngIf="currentUser" (click)="logout()">
     Cerrar Sesion
   </div>
 </div>
-<!-- main app container -->
 
 <div class="container">
   <router-outlet></router-outlet>
