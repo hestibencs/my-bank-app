@@ -1,5 +1,35 @@
 <div class="container-movements">
     <div class="container-movements__return">
-        <a routerLink="/">< Regresar</a>
+        <a routerLink="/">Regresar</a>
+    </div>
+    <div class="container-movements__title">
+        Tus movimientos
+    </div>
+    <div class="container-table">
+        <div class="container-table__header">
+            <div>
+                FECHA TRANSACCION
+            </div>
+            <div>
+                DESCRIPCION
+            </div>
+            <div class="container-table__header--amount">
+                MONTO
+            </div>
+        </div>
+        <div *ngFor="let movement of movements" class="container-table__row">
+            <div>
+                {{ movement.fechaTransaccion }}
+            </div>
+            <div>
+                {{ movement.descripcion }}
+            </div>
+            <div class="container-table__row--amount" [ngClass]="{
+                'container-table__row--green': movement.montoTransaccion > 0,
+                'container-table__row--red': movement.montoTransaccion < 0
+            }">
+                {{ movement.montoTransaccion | currency }}
+            </div>
+        </div>
     </div>
 </div>

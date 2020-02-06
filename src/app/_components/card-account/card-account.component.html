@@ -1,14 +1,14 @@
 <div class="container-card-account">
     <div class="container-card-account__name">
-        - 0092 - Cuenta de Ahorros
+        {{ cuentaId }} - {{ tipoCuenta }}
     </div>
     <div class="container-card-account__amount">
-        $2.360.000
+        {{ account.valorDisponible | currency }}
     </div>
     <div class="container-card-account__description">
         Saldo disponible
     </div>
     <div class="container-card-account__link">
-        <a routerLink="/movements">VER DETALLES</a>
+        <a [routerLink]="['/movements']" [queryParams]="{cuentaId: account.cuentaId}">VER DETALLES</a>
     </div>
 </div>

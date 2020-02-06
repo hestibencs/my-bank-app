@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ClientService } from '../_services/client.service';
+import { Account } from '../_models/account';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,11 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  accounts = ['', '', '', '', '', '', '', ''];
+  accounts: Account[] = [];
 
-  constructor() { }
+  constructor(
+    private clientService: ClientService
+  ) { }
 
   ngOnInit() {
+    this.clientService.obtenerCuentas().subscribe((data: Account[]) => {
+      this.accounts = data;
+    });
   }
 
 }

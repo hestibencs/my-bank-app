@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { } from 'rxjs/operators'
+import { AccountService } from '../_services/account.service';
+import { Movement } from '../_models/movement';
 
 @Component({
   selector: 'app-movements',
@@ -7,9 +11,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovementsComponent implements OnInit {
 
-  constructor() { }
+  movements: Movement[] = [];
+
+  constructor(
+    private route: ActivatedRoute,
+    private accountService: AccountService
+  ) { }
 
   ngOnInit() {
+    this.route.queryParams
+      .subscribe(params => {
+        this.accountService.obtenerMovimientos(params.cuentaId).subscribe((data) => {
+          this.movements = data;
+        })
+      });
   }
 
 }
