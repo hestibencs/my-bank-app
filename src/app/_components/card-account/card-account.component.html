@@ -1,0 +1,14 @@
+<div class="container-card-account">
+    <div class="container-card-account__name">
+        {{ cuentaId }} - {{ tipoCuenta }}
+    </div>
+    <div class="container-card-account__amount">
+        {{ account.valorDisponible | currency }}
+    </div>
+    <div class="container-card-account__description">
+        Saldo disponible
+    </div>
+    <div class="container-card-account__link">
+        <a [routerLink]="['/movements']" [queryParams]="{cuentaId: account.cuentaId}">VER DETALLES</a>
+    </div>
+</div>

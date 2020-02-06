@@ -1,0 +1,48 @@
+.container-movements {
+    padding: 1em;
+    
+    &__return {
+        padding: 1em;
+    }
+
+    &__title {
+        margin: 1em 0 1em 1em;;
+    }
+}
+
+.container-table {
+    padding: 1em;
+    
+    &__header, &__row {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-column-gap: 1em;
+        padding: 1em;
+        border: 1px solid gray;
+        background-color: white;
+
+        &--amount {
+            text-align: center;
+        }
+    }
+
+    &__header {
+        font-weight: bold;
+    }
+
+    &__row {
+        border-top: none;
+
+        &--amount {
+            font-weight: bold;
+        }
+
+        &--green {
+            color: green;
+        }
+
+        &--red {
+            color: red;
+        }
+    }
+}

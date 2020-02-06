@@ -1,0 +1,12 @@
+.container-dashboard {
+    padding: 1em;
+
+    &__title {
+        margin: 1em 0 1em 1em;;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

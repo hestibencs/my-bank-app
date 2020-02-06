@@ -1,0 +1,8 @@
+<div class="container-dashboard">
+    <div class="container-dashboard__title">
+        Mis cuentas
+    </div>
+    <div class="container-dashboard__list">
+        <app-card-account *ngFor="let account of accounts" [account]="account"></app-card-account>
+    </div>
+</div>

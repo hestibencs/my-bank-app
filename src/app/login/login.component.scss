@@ -1,0 +1,21 @@
+.container-login {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &__row {
+        padding: 1em 0;
+
+        &--text {
+            padding: 0;
+        }
+
+        &__input, &__button {
+            width: 30em;
+            height: 3em;
+            font-size: 1em;
+            padding: 0 0 0 1em;
+        }
+    }
+}

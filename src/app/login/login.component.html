@@ -1,0 +1,22 @@
+<div class="container-login">
+    <div class="container-login__title">
+        <h2>Ingresa</h2>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" c>
+        <div class="container-login__row container-login__row--text">
+            Usuario
+        </div>
+        <div class="container-login__row">
+            <input class="container-login__row__input" type="text" formControlName="username" />
+        </div>
+        <div class="container-login__row container-login__row--text">
+            Contraseña
+        </div>
+        <div class="container-login__row">
+            <input class="container-login__row__input" type="password" formControlName="password" />
+        </div>
+        <div class="container-login__row">
+            <button class="container-login__row__button" type="submit"> Login </button>
+        </div>
+    </form>
+</div>

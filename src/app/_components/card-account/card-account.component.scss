@@ -1,0 +1,26 @@
+.container-card-account {
+    margin: 1em;
+    border: 1px solid black;
+    padding: 0.7em;
+    min-width: 14em;
+    background-color: white;
+
+    &__name {
+        font-size: 0.7em;
+    }
+
+    &__amount {
+        font-size: 1em;
+        margin-top: 1em;
+    }
+
+    &__description {
+        font-size: 0.7em;
+        margin-bottom: 1.5em;
+    }
+
+    &__link {
+        font-size: 0.9em;
+        text-align: center;
+    }
+}
