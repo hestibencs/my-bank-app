@@ -19,7 +19,7 @@
         </div>
         <div *ngFor="let movement of movements" class="container-table__row">
             <div>
-                {{ movement.fechaTransaccion }}
+                {{ movement.fechaTransaccion | date:'dd-MM-yyyy' }}
             </div>
             <div>
                 {{ movement.descripcion }}

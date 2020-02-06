@@ -17,6 +17,9 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.clientService.obtenerCuentas().subscribe((data: Account[]) => {
+      data.sort((a: Account, b: Account) => {
+        return b.valorDisponible - a.valorDisponible;
+      })
       this.accounts = data;
     });
   }

@@ -14,9 +14,15 @@ export class AccountService {
   ) { }
 
   obtenerMovimientos(cuentaId: string): Observable<Movement[]> {
-    return this.apiService.putApi<any>('5e3b7e1330000055002145b2').pipe(
-      map(e => e.movements),
-      map(e => e.filter(j => j.cuentaId == cuentaId))
+    return this.apiService.putApi<any>('5e3b92183000006c002145e8').pipe(
+      map(e => e.movements as Movement[]),
+      map(e => e.filter(j => j.cuentaId == cuentaId)),
+      map((e) => {
+        e.forEach(j => {
+          j.fechaTransaccion = new Date(j.fechaTransaccion);
+        })
+        return e;
+      })
     );
   }
 }
